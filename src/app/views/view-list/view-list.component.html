@@ -4,3 +4,13 @@
   <a routerLink="/list" class="btn btn-outline-info btn-sm">List</a>
 
 </app-ui-navbar>
+
+<ng-container *ngIf="( productService.products$ | async) as products">
+  <app-ui-product-list [productList]=" products "></app-ui-product-list>
+</ng-container>
+
+<!--
+<code>
+  {{ productService.products$ | async | json }}
+</code>
+-->

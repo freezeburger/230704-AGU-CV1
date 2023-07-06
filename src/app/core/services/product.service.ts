@@ -3,6 +3,10 @@ import { BehaviorSubject } from 'rxjs';
 import { Product } from '../interfaces/product';
 import { HttpClient } from '@angular/common/http';
 
+export interface ProductResponse {
+  products:Product[]
+}
+
 @Injectable()
 export class ProductService {
 
@@ -15,7 +19,11 @@ export class ProductService {
   constructor(
     // @Inject(HttpClient) private http:HttpClient
     private http:HttpClient
-  ) { }
+  ) {
+    this.load();
+  }
 
-  public load(){}
+  public load(){
+    this.http.get<ProductResponse>(this.url).subscribe(data => this.products$.next(data.products) )
+  }
 }

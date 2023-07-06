@@ -1,4 +1,5 @@
-import { Component, OnChanges, OnDestroy, OnInit } from '@angular/core';
+import { Component, OnChanges, OnDestroy, OnInit, inject } from '@angular/core';
+import { ProductService } from 'src/app/core/services/product.service';
 
 @Component({
   selector: 'app-view-discount',
@@ -8,6 +9,8 @@ import { Component, OnChanges, OnDestroy, OnInit } from '@angular/core';
 export class ViewDiscountComponent implements OnInit, OnChanges, OnDestroy {
 
   // Component LifeCycle
+
+  public productService = inject(ProductService)
 
   constructor(){
     console.warn('1. Creation : ViewDiscountComponent')

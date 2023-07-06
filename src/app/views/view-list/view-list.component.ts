@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
+import { ProductService } from 'src/app/core/services/product.service';
 
 @Component({
   selector: 'app-view-list',
@@ -6,5 +7,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./view-list.component.scss']
 })
 export class ViewListComponent {
+
+  public productService = inject(ProductService)
 
 }

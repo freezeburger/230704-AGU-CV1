@@ -8,11 +8,13 @@
 <h2> Discounted Products </h2>
 
 <app-ui-image-carousel
-  [images]="
-  [
-    'https://placehold.co/500x250/00F/FFF',
-    'https://placehold.co/500x250/0F0/FFF',
-    'https://placehold.co/500x250/000/FFF'
-  ]
-  ">
+  *ngFor="let product of (productService.products$ | async)"
+  [images]="product.images">
 </app-ui-image-carousel>
+
+
+<!--
+<code>
+  {{ productService.products$ | async | json | uppercase }}
+</code>
+-->
