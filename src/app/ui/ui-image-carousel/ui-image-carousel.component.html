@@ -1,1 +1,6 @@
-<p>ui-image-carousel works!</p>
+
+<div class="carousel-container">
+  <div   [ngStyle]=" {'left': leftPos + 'px'} " >
+    <img [src]=" item " alt="" *ngFor="let item of images">
+  </div>
+</div>

@@ -1,0 +1,21 @@
+div.carousel-container{
+  width:500px;
+  height:250px;
+  overflow: hidden;
+  margin: 10px;
+  position:relative;
+
+  div{
+    position: absolute;
+    left:0;
+    transition:left 0.5s ease;
+  }
+}
+
+/*
+div.carousel-container > div{
+  position: absolute;
+  left:0;
+  transition:left 0.5s ease;
+}
+ */
