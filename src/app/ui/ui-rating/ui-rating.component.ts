@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { Rating } from 'src/app/core/interfaces/product';
 
 @Component({
   selector: 'app-ui-rating',
@@ -6,5 +7,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./ui-rating.component.scss']
 })
 export class UiRatingComponent {
+
+  @Input() note:Rating = 0;
+  maximum = 5;
 
 }

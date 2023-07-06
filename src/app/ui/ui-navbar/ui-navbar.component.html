@@ -1,1 +1,18 @@
-<p>ui-navbar works!</p>
+<!-- <nav class="navbar text-white d-flex p-2 justify-content-start "
+    [ngClass]="{
+      'bg-danger': online === false,
+      'bg-primary': online === true,
+    }">
+-->
+
+<nav class="navbar text-white d-flex p-2 justify-content-start "
+     [ngClass]=" online ? 'bg-primary' : 'bg-danger' ">
+  <h1>PRC</h1>
+  <span>
+    <ng-content></ng-content>
+  </span>
+
+</nav>
+<div class="alert alert-warning" *ngIf=" online === false ">
+  Pas connection réseau.
+</div>
