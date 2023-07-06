@@ -4,6 +4,7 @@ import { UiModule } from '../ui/ui.module';
 import { ViewDiscountComponent } from './view-discount/view-discount.component';
 import { ViewListComponent } from './view-list/view-list.component';
 import { ViewDetailComponent } from './view-detail/view-detail.component';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [
@@ -18,6 +19,7 @@ import { ViewDetailComponent } from './view-detail/view-detail.component';
   ],
   imports: [
     CommonModule,
+    RouterModule,
     UiModule
   ]
 })

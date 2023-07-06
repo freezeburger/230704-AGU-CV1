@@ -149,7 +149,12 @@ export class ViewListComponent {
     </div>
 
     <div class="tab-pane fade " id="templateData">
-        <pre class="line-numbers"><code class="language-html">&lt;p&gt;view-list works!&lt;/p&gt;
+        <pre class="line-numbers"><code class="language-html">&lt;app-ui-navbar&gt;
+
+  &lt;a routerLink&#x3D;&quot;/home&quot; class&#x3D;&quot;btn btn-outline-info btn-sm&quot;&gt;Home&lt;/a&gt;
+  &lt;a routerLink&#x3D;&quot;/list&quot; class&#x3D;&quot;btn btn-outline-info btn-sm&quot;&gt;List&lt;/a&gt;
+
+&lt;/app-ui-navbar&gt;
 </code></pre>
     </div>
 
@@ -185,7 +190,7 @@ export class ViewListComponent {
 <script src="../js/libs/htmlparser.js"></script>
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
-        var COMPONENT_TEMPLATE = '<div><p>view-list works!</p></div>'
+        var COMPONENT_TEMPLATE = '<div><app-ui-navbar>  <a routerLink="/home" class="btn btn-outline-info btn-sm">Home</a>  <a routerLink="/list" class="btn btn-outline-info btn-sm">List</a></app-ui-navbar></div>'
     var COMPONENTS = [{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'UiImageCarouselComponent', 'selector': 'app-ui-image-carousel'},{'name': 'UiNavbarComponent', 'selector': 'app-ui-navbar'},{'name': 'UiProductDetailComponent', 'selector': 'app-ui-product-detail'},{'name': 'UiProductListComponent', 'selector': 'app-ui-product-list'},{'name': 'UiProductListItemComponent', 'selector': 'app-ui-product-list-item'},{'name': 'UiRatingComponent', 'selector': 'app-ui-rating'},{'name': 'UiSearchbarComponent', 'selector': 'app-ui-searchbar'},{'name': 'UiSimpleImageComponent', 'selector': 'app-ui-simple-image'},{'name': 'ViewDetailComponent', 'selector': 'app-view-detail'},{'name': 'ViewDiscountComponent', 'selector': 'app-view-discount'},{'name': 'ViewListComponent', 'selector': 'app-view-list'}];
     var DIRECTIVES = [];
     var ACTUAL_COMPONENT = {'name': 'ViewListComponent'};

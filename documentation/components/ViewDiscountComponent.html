@@ -75,6 +75,14 @@
 
 
 
+    <p class="comment">
+        <h3>Implements</h3>
+    </p>
+    <p class="comment">
+                <code>OnInit</code>
+                <code>OnChanges</code>
+                <code>OnDestroy</code>
+    </p>
 
 
 <section data-compodoc="block-metadata">
@@ -123,33 +131,234 @@
     </table>
 </section>
 
+    <section data-compodoc="block-index">
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#ngOnChanges" >ngOnChanges</a>
+                            </li>
+                            <li>
+                                <a href="#ngOnDestroy" >ngOnDestroy</a>
+                            </li>
+                            <li>
+                                <a href="#ngOnInit" >ngOnInit</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
 
 
 
 
 
+        </tbody>
+    </table>
+</section>
+
+    <section data-compodoc="block-constructor">
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor()</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="8" class="link-to-prism">src/app/views/view-discount/view-discount.component.ts:8</a></div>
+                            </td>
+                        </tr>
+
+            </tbody>
+        </table>
+</section>
 
 
+
+
+
+    <section data-compodoc="block-methods">
+    
+    <h3 id="methods">
+        Methods
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="ngOnChanges"></a>
+                    <span class="name">
+                        <span ><b>ngOnChanges</b></span>
+                        <a href="#ngOnChanges"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>ngOnChanges()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="20"
+                            class="link-to-prism">src/app/views/view-discount/view-discount.component.ts:20</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="ngOnDestroy"></a>
+                    <span class="name">
+                        <span ><b>ngOnDestroy</b></span>
+                        <a href="#ngOnDestroy"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>ngOnDestroy()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="24"
+                            class="link-to-prism">src/app/views/view-discount/view-discount.component.ts:24</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="ngOnInit"></a>
+                    <span class="name">
+                        <span ><b>ngOnInit</b></span>
+                        <a href="#ngOnInit"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>ngOnInit()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="16"
+                            class="link-to-prism">src/app/views/view-discount/view-discount.component.ts:16</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
 
 </div>
 
 
     <div class="tab-pane fade  tab-source-code" id="source">
-        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component } from &#x27;@angular/core&#x27;;
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component, OnChanges, OnDestroy, OnInit } from &#x27;@angular/core&#x27;;
 
 @Component({
   selector: &#x27;app-view-discount&#x27;,
   templateUrl: &#x27;./view-discount.component.html&#x27;,
   styleUrls: [&#x27;./view-discount.component.scss&#x27;]
 })
-export class ViewDiscountComponent {
+export class ViewDiscountComponent implements OnInit, OnChanges, OnDestroy {
 
+  // Component LifeCycle
+
+  constructor(){
+    console.warn(&#x27;1. Creation : ViewDiscountComponent&#x27;)
+  }
+
+  ngOnInit(){
+    console.warn(&#x27;2. DOM Insertion : ViewDiscountComponent&#x27;)
+  }
+
+  ngOnChanges(){
+    console.warn(&#x27;3. Evolution : ViewDiscountComponent&#x27;)
+  }
+
+  ngOnDestroy(){
+    console.warn(&#x27;4. DOM Suppression : ViewDiscountComponent&#x27;)
+  }
 }
 </code></pre>
     </div>
 
     <div class="tab-pane fade " id="templateData">
-        <pre class="line-numbers"><code class="language-html">&lt;p&gt;view-discount works!&lt;/p&gt;
+        <pre class="line-numbers"><code class="language-html">&lt;app-ui-navbar&gt;
+
+  &lt;a routerLink&#x3D;&quot;/home&quot; class&#x3D;&quot;btn btn-outline-info btn-sm&quot;&gt;Home&lt;/a&gt;
+  &lt;a routerLink&#x3D;&quot;/list&quot; class&#x3D;&quot;btn btn-outline-info btn-sm&quot;&gt;List&lt;/a&gt;
+
+&lt;/app-ui-navbar&gt;
+
+&lt;h2&gt; Discounted Products &lt;/h2&gt;
+
+&lt;app-ui-image-carousel
+  [images]&#x3D;&quot;
+  [
+    &#x27;https://placehold.co/500x250/00F/FFF&#x27;,
+    &#x27;https://placehold.co/500x250/0F0/FFF&#x27;,
+    &#x27;https://placehold.co/500x250/000/FFF&#x27;
+  ]
+  &quot;&gt;
+&lt;/app-ui-image-carousel&gt;
 </code></pre>
     </div>
 
@@ -185,7 +394,7 @@ export class ViewDiscountComponent {
 <script src="../js/libs/htmlparser.js"></script>
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
-        var COMPONENT_TEMPLATE = '<div><p>view-discount works!</p></div>'
+        var COMPONENT_TEMPLATE = '<div><app-ui-navbar>  <a routerLink="/home" class="btn btn-outline-info btn-sm">Home</a>  <a routerLink="/list" class="btn btn-outline-info btn-sm">List</a></app-ui-navbar><h2> Discounted Products </h2><app-ui-image-carousel  [images]="  [    \'https://placehold.co/500x250/00F/FFF\',    \'https://placehold.co/500x250/0F0/FFF\',    \'https://placehold.co/500x250/000/FFF\'  ]  "></app-ui-image-carousel></div>'
     var COMPONENTS = [{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'UiImageCarouselComponent', 'selector': 'app-ui-image-carousel'},{'name': 'UiNavbarComponent', 'selector': 'app-ui-navbar'},{'name': 'UiProductDetailComponent', 'selector': 'app-ui-product-detail'},{'name': 'UiProductListComponent', 'selector': 'app-ui-product-list'},{'name': 'UiProductListItemComponent', 'selector': 'app-ui-product-list-item'},{'name': 'UiRatingComponent', 'selector': 'app-ui-rating'},{'name': 'UiSearchbarComponent', 'selector': 'app-ui-searchbar'},{'name': 'UiSimpleImageComponent', 'selector': 'app-ui-simple-image'},{'name': 'ViewDetailComponent', 'selector': 'app-view-detail'},{'name': 'ViewDiscountComponent', 'selector': 'app-view-discount'},{'name': 'ViewListComponent', 'selector': 'app-view-list'}];
     var DIRECTIVES = [];
     var ACTUAL_COMPONENT = {'name': 'ViewDiscountComponent'};
