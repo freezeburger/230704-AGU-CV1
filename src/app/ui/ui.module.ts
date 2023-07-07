@@ -8,6 +8,7 @@ import { UiProductDetailComponent } from './ui-product-detail/ui-product-detail.
 import { UiRatingComponent } from './ui-rating/ui-rating.component';
 import { UiSimpleImageComponent } from './ui-simple-image/ui-simple-image.component';
 import { UiProductListItemComponent } from './ui-product-list-item/ui-product-list-item.component';
+import { UiZoomableDirective } from './ui-zoomable.directive';
 
 
 
@@ -20,7 +21,8 @@ import { UiProductListItemComponent } from './ui-product-list-item/ui-product-li
     UiProductDetailComponent,
     UiRatingComponent,
     UiSimpleImageComponent,
-    UiProductListItemComponent
+    UiProductListItemComponent,
+    UiZoomableDirective
   ],
   imports: [
     CommonModule
@@ -30,7 +32,8 @@ import { UiProductListItemComponent } from './ui-product-list-item/ui-product-li
     UiSearchbarComponent,
     UiImageCarouselComponent,
     UiProductListComponent,
-    UiProductDetailComponent
+    UiProductDetailComponent,
+    UiZoomableDirective
   ]
 })
 export class UiModule { }
