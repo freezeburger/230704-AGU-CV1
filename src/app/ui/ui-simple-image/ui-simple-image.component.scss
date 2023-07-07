@@ -1,0 +1,8 @@
+$dimension:250px;
+
+img{
+  max-width: $dimension;
+  max-height: $dimension;
+  border-radius: calc( $dimension / 10 );
+  margin:10px;
+}

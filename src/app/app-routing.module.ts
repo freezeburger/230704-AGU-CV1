@@ -7,15 +7,18 @@ import { ViewDetailComponent } from './views/view-detail/view-detail.component';
 const routes: Routes = [
   {
     path: 'home',
-    component: ViewDiscountComponent
+    component: ViewDiscountComponent,
+    title:'Home'
   },
   {
     path: 'list',
-    component: ViewListComponent
+    component: ViewListComponent,
+    title:'Product List'
   },
   {
     path: 'product',
-    component: ViewDetailComponent
+    component: ViewDetailComponent,
+    title:'Your Selection'
   },
   {
     path:'**',
