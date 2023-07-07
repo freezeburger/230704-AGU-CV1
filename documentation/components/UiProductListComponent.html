@@ -123,9 +123,64 @@
     </table>
 </section>
 
+    <section data-compodoc="block-index">
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Inputs</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#productList" >productList</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
 
 
 
+
+        </tbody>
+    </table>
+</section>
+
+
+    <section data-compodoc="block-inputs">
+    <h3 id="inputs">Inputs</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="productList"></a>
+                        <b>productList</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>ProductPreview[]</code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>[]</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="10" class="link-to-prism">src/app/ui/ui-product-list/ui-product-list.component.ts:10</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+</section>
 
 
 
@@ -135,7 +190,8 @@
 
 
     <div class="tab-pane fade  tab-source-code" id="source">
-        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component } from &#x27;@angular/core&#x27;;
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component, Input } from &#x27;@angular/core&#x27;;
+import { ProductPreview } from &#x27;src/app/core/interfaces/product&#x27;;
 
 @Component({
   selector: &#x27;app-ui-product-list&#x27;,
@@ -143,13 +199,16 @@
   styleUrls: [&#x27;./ui-product-list.component.scss&#x27;]
 })
 export class UiProductListComponent {
-
+  @Input() productList:ProductPreview[] &#x3D; []
 }
 </code></pre>
     </div>
 
     <div class="tab-pane fade " id="templateData">
-        <pre class="line-numbers"><code class="language-html">&lt;p&gt;ui-product-list works!&lt;/p&gt;
+        <pre class="line-numbers"><code class="language-html">
+&lt;app-ui-product-list-item
+  *ngFor&#x3D;&quot;let item of productList&quot; [product]&#x3D;&quot; item &quot;&gt;
+&lt;/app-ui-product-list-item&gt;
 </code></pre>
     </div>
 
@@ -185,9 +244,9 @@ export class UiProductListComponent {
 <script src="../js/libs/htmlparser.js"></script>
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
-        var COMPONENT_TEMPLATE = '<div><p>ui-product-list works!</p></div>'
+        var COMPONENT_TEMPLATE = '<div><app-ui-product-list-item  *ngFor="let item of productList" [product]=" item "></app-ui-product-list-item></div>'
     var COMPONENTS = [{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'UiImageCarouselComponent', 'selector': 'app-ui-image-carousel'},{'name': 'UiNavbarComponent', 'selector': 'app-ui-navbar'},{'name': 'UiProductDetailComponent', 'selector': 'app-ui-product-detail'},{'name': 'UiProductListComponent', 'selector': 'app-ui-product-list'},{'name': 'UiProductListItemComponent', 'selector': 'app-ui-product-list-item'},{'name': 'UiRatingComponent', 'selector': 'app-ui-rating'},{'name': 'UiSearchbarComponent', 'selector': 'app-ui-searchbar'},{'name': 'UiSimpleImageComponent', 'selector': 'app-ui-simple-image'},{'name': 'ViewDetailComponent', 'selector': 'app-view-detail'},{'name': 'ViewDiscountComponent', 'selector': 'app-view-discount'},{'name': 'ViewListComponent', 'selector': 'app-view-list'}];
-    var DIRECTIVES = [];
+    var DIRECTIVES = [{'name': 'UiZoomableDirective', 'selector': '[appUiZoomable]'}];
     var ACTUAL_COMPONENT = {'name': 'UiProductListComponent'};
 </script>
 <script src="../js/tree.js"></script>

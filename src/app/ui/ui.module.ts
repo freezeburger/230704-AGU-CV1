@@ -9,7 +9,7 @@ import { UiRatingComponent } from './ui-rating/ui-rating.component';
 import { UiSimpleImageComponent } from './ui-simple-image/ui-simple-image.component';
 import { UiProductListItemComponent } from './ui-product-list-item/ui-product-list-item.component';
 import { UiZoomableDirective } from './ui-zoomable.directive';
-
+import { NgbRatingModule } from '@ng-bootstrap/ng-bootstrap';
 
 
 @NgModule({
@@ -25,7 +25,8 @@ import { UiZoomableDirective } from './ui-zoomable.directive';
     UiZoomableDirective
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    NgbRatingModule
   ],
   exports: [
     UiNavbarComponent,

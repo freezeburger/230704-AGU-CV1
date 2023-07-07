@@ -123,6 +123,34 @@
     </table>
 </section>
 
+    <section data-compodoc="block-index">
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Properties</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#productService" >productService</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
 
 
 
@@ -130,12 +158,45 @@
 
 
 
+    <section data-compodoc="block-properties">
+    
+    <h3 id="inputs">
+        Properties
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="productService"></a>
+                    <span class="name">
+                            <span class="modifier">Public</span>
+                        <span ><b>productService</b></span>
+                        <a href="#productService"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>inject(ProductService)</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="11" class="link-to-prism">src/app/views/view-list/view-list.component.ts:11</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+</section>
 
 </div>
 
 
     <div class="tab-pane fade  tab-source-code" id="source">
-        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component } from &#x27;@angular/core&#x27;;
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component, inject } from &#x27;@angular/core&#x27;;
+import { ProductService } from &#x27;src/app/core/services/product.service&#x27;;
 
 @Component({
   selector: &#x27;app-view-list&#x27;,
@@ -144,6 +205,8 @@
 })
 export class ViewListComponent {
 
+  public productService &#x3D; inject(ProductService)
+
 }
 </code></pre>
     </div>
@@ -151,10 +214,22 @@ export class ViewListComponent {
     <div class="tab-pane fade " id="templateData">
         <pre class="line-numbers"><code class="language-html">&lt;app-ui-navbar&gt;
 
-  &lt;a routerLink&#x3D;&quot;/home&quot; class&#x3D;&quot;btn btn-outline-info btn-sm&quot;&gt;Home&lt;/a&gt;
-  &lt;a routerLink&#x3D;&quot;/list&quot; class&#x3D;&quot;btn btn-outline-info btn-sm&quot;&gt;List&lt;/a&gt;
+  &lt;a routerLink&#x3D;&quot;/home&quot; class&#x3D;&quot;btn btn-outline-info btn-sm&quot; appUiZoomable&gt;Home&lt;/a&gt;
+  &lt;a routerLink&#x3D;&quot;/list&quot; class&#x3D;&quot;btn btn-outline-info btn-sm&quot; appUiZoomable&gt;List&lt;/a&gt;
 
 &lt;/app-ui-navbar&gt;
+
+&lt;!-- &lt;button (click)&#x3D;&quot; productService.load() &quot;&gt;Load Products&lt;/button&gt; --&gt;
+
+&lt;ng-container *ngIf&#x3D;&quot;( productService.products$ | async) as products&quot;&gt;
+  &lt;app-ui-product-list [productList]&#x3D;&quot; products &quot;&gt;&lt;/app-ui-product-list&gt;
+&lt;/ng-container&gt;
+
+&lt;!--
+&lt;code&gt;
+  {{ productService.products$ | async | json }}
+&lt;/code&gt;
+--&gt;
 </code></pre>
     </div>
 
@@ -190,9 +265,9 @@ export class ViewListComponent {
 <script src="../js/libs/htmlparser.js"></script>
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
-        var COMPONENT_TEMPLATE = '<div><app-ui-navbar>  <a routerLink="/home" class="btn btn-outline-info btn-sm">Home</a>  <a routerLink="/list" class="btn btn-outline-info btn-sm">List</a></app-ui-navbar></div>'
+        var COMPONENT_TEMPLATE = '<div><app-ui-navbar>  <a routerLink="/home" class="btn btn-outline-info btn-sm" appUiZoomable>Home</a>  <a routerLink="/list" class="btn btn-outline-info btn-sm" appUiZoomable>List</a></app-ui-navbar><!-- <button (click)=" productService.load() ">Load Products</button> --><ng-container *ngIf="( productService.products$ | async) as products">  <app-ui-product-list [productList]=" products "></app-ui-product-list></ng-container><!--<code>  {{ productService.products$ | async | json }}</code>--></div>'
     var COMPONENTS = [{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'UiImageCarouselComponent', 'selector': 'app-ui-image-carousel'},{'name': 'UiNavbarComponent', 'selector': 'app-ui-navbar'},{'name': 'UiProductDetailComponent', 'selector': 'app-ui-product-detail'},{'name': 'UiProductListComponent', 'selector': 'app-ui-product-list'},{'name': 'UiProductListItemComponent', 'selector': 'app-ui-product-list-item'},{'name': 'UiRatingComponent', 'selector': 'app-ui-rating'},{'name': 'UiSearchbarComponent', 'selector': 'app-ui-searchbar'},{'name': 'UiSimpleImageComponent', 'selector': 'app-ui-simple-image'},{'name': 'ViewDetailComponent', 'selector': 'app-view-detail'},{'name': 'ViewDiscountComponent', 'selector': 'app-view-discount'},{'name': 'ViewListComponent', 'selector': 'app-view-list'}];
-    var DIRECTIVES = [];
+    var DIRECTIVES = [{'name': 'UiZoomableDirective', 'selector': '[appUiZoomable]'}];
     var ACTUAL_COMPONENT = {'name': 'ViewListComponent'};
 </script>
 <script src="../js/tree.js"></script>

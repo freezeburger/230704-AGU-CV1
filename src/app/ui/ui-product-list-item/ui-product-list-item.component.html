@@ -1,4 +1,4 @@
-<div class="card m-2 d-flex flex-row" *ngIf="product">
+<div class="card m-2 d-flex flex-row" *ngIf="product" appUiZoomable>
   <!-- {{product | json}} -->
   <!-- <img [src]="product.thumbnail" alt="Illustration"> -->
 
@@ -8,6 +8,9 @@
     <h1>{{ product.title }}</h1>
     <h2>{{ product.price }}</h2>
     <h2>{{ product.rating }}</h2>
+
+    <app-ui-rating [note]="product.rating"></app-ui-rating>
+
   </div>
 
 </div>

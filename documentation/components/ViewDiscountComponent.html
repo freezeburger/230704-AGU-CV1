@@ -135,6 +135,21 @@
     <h3 id="index">Index</h3>
     <table class="table table-sm table-bordered index-table">
         <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Properties</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#productService" >productService</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
 
                 <tr>
                     <td class="col-md-4">
@@ -176,7 +191,7 @@
                 </tr>
                         <tr>
                             <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="8" class="link-to-prism">src/app/views/view-discount/view-discount.component.ts:8</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="13" class="link-to-prism">src/app/views/view-discount/view-discount.component.ts:13</a></div>
                             </td>
                         </tr>
 
@@ -213,8 +228,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="20"
-                            class="link-to-prism">src/app/views/view-discount/view-discount.component.ts:20</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="23"
+                            class="link-to-prism">src/app/views/view-discount/view-discount.component.ts:23</a></div>
                 </td>
             </tr>
 
@@ -250,8 +265,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="24"
-                            class="link-to-prism">src/app/views/view-discount/view-discount.component.ts:24</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="27"
+                            class="link-to-prism">src/app/views/view-discount/view-discount.component.ts:27</a></div>
                 </td>
             </tr>
 
@@ -287,8 +302,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="16"
-                            class="link-to-prism">src/app/views/view-discount/view-discount.component.ts:16</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="19"
+                            class="link-to-prism">src/app/views/view-discount/view-discount.component.ts:19</a></div>
                 </td>
             </tr>
 
@@ -305,12 +320,45 @@
         </tbody>
     </table>
 </section>
+    <section data-compodoc="block-properties">
+    
+    <h3 id="inputs">
+        Properties
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="productService"></a>
+                    <span class="name">
+                            <span class="modifier">Public</span>
+                        <span ><b>productService</b></span>
+                        <a href="#productService"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>inject(ProductService)</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="13" class="link-to-prism">src/app/views/view-discount/view-discount.component.ts:13</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+</section>
 
 </div>
 
 
     <div class="tab-pane fade  tab-source-code" id="source">
-        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component, OnChanges, OnDestroy, OnInit } from &#x27;@angular/core&#x27;;
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component, OnChanges, OnDestroy, OnInit, inject } from &#x27;@angular/core&#x27;;
+import { ProductService } from &#x27;src/app/core/services/product.service&#x27;;
 
 @Component({
   selector: &#x27;app-view-discount&#x27;,
@@ -320,6 +368,8 @@
 export class ViewDiscountComponent implements OnInit, OnChanges, OnDestroy {
 
   // Component LifeCycle
+
+  public productService &#x3D; inject(ProductService)
 
   constructor(){
     console.warn(&#x27;1. Creation : ViewDiscountComponent&#x27;)
@@ -351,14 +401,16 @@ export class ViewDiscountComponent implements OnInit, OnChanges, OnDestroy {
 &lt;h2&gt; Discounted Products &lt;/h2&gt;
 
 &lt;app-ui-image-carousel
-  [images]&#x3D;&quot;
-  [
-    &#x27;https://placehold.co/500x250/00F/FFF&#x27;,
-    &#x27;https://placehold.co/500x250/0F0/FFF&#x27;,
-    &#x27;https://placehold.co/500x250/000/FFF&#x27;
-  ]
-  &quot;&gt;
+  *ngFor&#x3D;&quot;let product of (productService.products$ | async)&quot;
+  [images]&#x3D;&quot;product.images&quot;&gt;
 &lt;/app-ui-image-carousel&gt;
+
+
+&lt;!--
+&lt;code&gt;
+  {{ productService.products$ | async | json | uppercase }}
+&lt;/code&gt;
+--&gt;
 </code></pre>
     </div>
 
@@ -394,9 +446,9 @@ export class ViewDiscountComponent implements OnInit, OnChanges, OnDestroy {
 <script src="../js/libs/htmlparser.js"></script>
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
-        var COMPONENT_TEMPLATE = '<div><app-ui-navbar>  <a routerLink="/home" class="btn btn-outline-info btn-sm">Home</a>  <a routerLink="/list" class="btn btn-outline-info btn-sm">List</a></app-ui-navbar><h2> Discounted Products </h2><app-ui-image-carousel  [images]="  [    \'https://placehold.co/500x250/00F/FFF\',    \'https://placehold.co/500x250/0F0/FFF\',    \'https://placehold.co/500x250/000/FFF\'  ]  "></app-ui-image-carousel></div>'
+        var COMPONENT_TEMPLATE = '<div><app-ui-navbar>  <a routerLink="/home" class="btn btn-outline-info btn-sm">Home</a>  <a routerLink="/list" class="btn btn-outline-info btn-sm">List</a></app-ui-navbar><h2> Discounted Products </h2><app-ui-image-carousel  *ngFor="let product of (productService.products$ | async)"  [images]="product.images"></app-ui-image-carousel><!--<code>  {{ productService.products$ | async | json | uppercase }}</code>--></div>'
     var COMPONENTS = [{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'UiImageCarouselComponent', 'selector': 'app-ui-image-carousel'},{'name': 'UiNavbarComponent', 'selector': 'app-ui-navbar'},{'name': 'UiProductDetailComponent', 'selector': 'app-ui-product-detail'},{'name': 'UiProductListComponent', 'selector': 'app-ui-product-list'},{'name': 'UiProductListItemComponent', 'selector': 'app-ui-product-list-item'},{'name': 'UiRatingComponent', 'selector': 'app-ui-rating'},{'name': 'UiSearchbarComponent', 'selector': 'app-ui-searchbar'},{'name': 'UiSimpleImageComponent', 'selector': 'app-ui-simple-image'},{'name': 'ViewDetailComponent', 'selector': 'app-view-detail'},{'name': 'ViewDiscountComponent', 'selector': 'app-view-discount'},{'name': 'ViewListComponent', 'selector': 'app-view-list'}];
-    var DIRECTIVES = [];
+    var DIRECTIVES = [{'name': 'UiZoomableDirective', 'selector': '[appUiZoomable]'}];
     var ACTUAL_COMPONENT = {'name': 'ViewDiscountComponent'};
 </script>
 <script src="../js/tree.js"></script>

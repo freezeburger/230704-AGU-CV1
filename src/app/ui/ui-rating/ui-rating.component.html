@@ -1,5 +1,15 @@
 
 
-<code>
-  {{ note }} / {{ maximum }}
-</code>
+<ngb-rating
+  [rate]="note"
+  [max]="maximum"
+  [readonly]="true"
+  >
+
+  <ng-template let-fill="fill" >
+    <i class="bi-heart-fill">
+      <i *ngIf="fill > 0" class="bi-heart-fill filled" [style.width.%]="fill"></i>
+    </i>
+  </ng-template>
+
+</ngb-rating>

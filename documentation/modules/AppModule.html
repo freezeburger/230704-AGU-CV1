@@ -243,6 +243,7 @@
     <div class="tab-pane fade  tab-source-code" id="source">
         <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { NgModule } from &#x27;@angular/core&#x27;;
 import { BrowserModule } from &#x27;@angular/platform-browser&#x27;;
+import { HttpClientModule } from &#x27;@angular/common/http&#x27;;
 
 import { AppRoutingModule } from &#x27;./app-routing.module&#x27;;
 import { AppComponent } from &#x27;./app.component&#x27;;
@@ -256,6 +257,7 @@ import { ProductService } from &#x27;./core/services/product.service&#x27;;
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     AppRoutingModule,
     ViewsModule,
     NgbModule
