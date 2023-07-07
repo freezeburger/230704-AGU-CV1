@@ -1,7 +1,25 @@
 
+
 <div class="card flex-row m-1 p-2">
-  <input type="text" class="form-control" placeholder="Search...">
-  <button class="btn btn-success">
+
+  <input type="text"
+         class="form-control"
+         placeholder="Search..."
+         [(ngModel)]="term"
+         #field="ngModel"
+         minlength="4">
+
+  <button
+    class="btn btn-success"
+
+    (click)="search.emit(term); term = '' "
+
+    [disabled]=" !term || field.invalid  ">
     <i class="bi bi-search"></i>
   </button>
+
+</div>
+
+<div class="alert alert-warning" *ngIf="field.invalid && field.dirty  && field.touched">
+  4 charactères minimum.
 </div>

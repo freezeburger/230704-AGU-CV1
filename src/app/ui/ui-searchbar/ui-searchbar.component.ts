@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 
 @Component({
   selector: 'app-ui-searchbar',
@@ -6,5 +6,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./ui-searchbar.component.scss']
 })
 export class UiSearchbarComponent {
+
+  @Output() search = new EventEmitter<string>();
+
+  term = '';
 
 }

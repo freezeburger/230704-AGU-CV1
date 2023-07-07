@@ -10,6 +10,7 @@ import { UiSimpleImageComponent } from './ui-simple-image/ui-simple-image.compon
 import { UiProductListItemComponent } from './ui-product-list-item/ui-product-list-item.component';
 import { UiZoomableDirective } from './ui-zoomable.directive';
 import { NgbRatingModule } from '@ng-bootstrap/ng-bootstrap';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -26,7 +27,9 @@ import { NgbRatingModule } from '@ng-bootstrap/ng-bootstrap';
   ],
   imports: [
     CommonModule,
-    NgbRatingModule
+    NgbRatingModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   exports: [
     UiNavbarComponent,

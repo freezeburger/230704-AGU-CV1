@@ -8,6 +8,7 @@ import { ProductService } from 'src/app/core/services/product.service';
 })
 export class ViewListComponent {
 
+  public searchText = '';
   public productService = inject(ProductService)
 
 }
