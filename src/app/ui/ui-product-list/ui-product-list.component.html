@@ -1,4 +1,5 @@
 
 <app-ui-product-list-item
+  (click)="select(item)"
   *ngFor="let item of productList" [product]=" item ">
 </app-ui-product-list-item>

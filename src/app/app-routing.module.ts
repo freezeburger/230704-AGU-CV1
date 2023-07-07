@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { ViewDiscountComponent } from './views/view-discount/view-discount.component';
 import { ViewListComponent } from './views/view-list/view-list.component';
 import { ViewDetailComponent } from './views/view-detail/view-detail.component';
+import { NavigationGuard, navigationGuard } from './core/guards/navigation.guard';
 
 const routes: Routes = [
   {
@@ -17,6 +18,12 @@ const routes: Routes = [
   },
   {
     path: 'product',
+    component: ViewDetailComponent,
+    title:'Your Selection',
+    canActivate:[NavigationGuard]
+  },
+  {
+    path: 'product/:id',
     component: ViewDetailComponent,
     title:'Your Selection'
   },

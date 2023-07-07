@@ -4,3 +4,19 @@
   <a routerLink="/list" class="btn btn-outline-info btn-sm">List</a>
 
 </app-ui-navbar>
+
+<!-- <div class="card m-3">
+  <pre>
+    <code>
+    {{ product | json}}
+    </code>
+  </pre>
+</div> -->
+
+<div class="card m-3">
+  <pre>
+    <code>
+    {{ navigation.selectedProduct$ | async | json}}
+    </code>
+  </pre>
+</div>

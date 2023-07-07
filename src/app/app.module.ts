@@ -7,21 +7,25 @@ import { AppComponent } from './app.component';
 import { ViewsModule } from './views/views.module';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { ProductService } from './core/services/product.service';
+import { VersionComponent } from './version/version.component';
+import { UiModule } from './ui/ui.module';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    VersionComponent
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
     AppRoutingModule,
     ViewsModule,
+    UiModule,
     NgbModule
   ],
   providers: [
     ProductService
   ],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent, VersionComponent]
 })
 export class AppModule { }
