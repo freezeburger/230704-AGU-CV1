@@ -5,12 +5,14 @@ import { ViewDiscountComponent } from './view-discount/view-discount.component';
 import { ViewListComponent } from './view-list/view-list.component';
 import { ViewDetailComponent } from './view-detail/view-detail.component';
 import { RouterModule } from '@angular/router';
+import { FilterPipe } from './filter.pipe';
 
 @NgModule({
   declarations: [
     ViewDiscountComponent,
     ViewListComponent,
-    ViewDetailComponent
+    ViewDetailComponent,
+    FilterPipe
   ],
   exports:[
     ViewDiscountComponent,

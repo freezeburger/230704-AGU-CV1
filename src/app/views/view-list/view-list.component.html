@@ -11,8 +11,8 @@
 
 <!-- <button (click)=" productService.load() ">Load Products</button> -->
 
-<ng-container *ngIf="( productService.products$ | async) as products">
-  <app-ui-product-list [productList]=" products "></app-ui-product-list>
+<ng-container *ngIf="( productService.products$ | async ) as products">
+  <app-ui-product-list [productList]=" products | filter:searchText "></app-ui-product-list>
 </ng-container>
 
 <!--
